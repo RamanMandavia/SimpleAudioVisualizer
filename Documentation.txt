@@ -1,0 +1,49 @@
+Raman Mandavia
+Audio Visualizer Documentation
+
+Additional Features:
+AUDIO
+-None of the original tracks are present, instead I have put
+5 tracks of my choice.
+-The user can choose a file of their own to play. This makes
+the selection the current track being played, but also pauses
+all audio, so the "Play" button must be clicked to start the
+selected track. This track is not saved anywhere.
+-Delay/Reverb slider. It is somewhat finnicky, despite the
+fact that I had used an identical node setup before and it
+worked flawlessly. Delay and Volume both affect the visualization.
+-Both frequency and waveform data can be visualized, controled
+by a set of radio checkboxes.
+
+VISUAL
+-Although I kept the circles from earlier, the max radius of these
+circles can be adjusted. This also adjusts the bars that are
+drawn.
+- Horizontal and vertical visualization lines can be selected,
+with inverted reflections shown when another box is checked.
+-Checkboxes also control the circles and bars.
+-The background has the plain black default, along with both
+Linear and Radial gradient options, controlled by a radio
+checkbox trio.
+-There is a simple blue and black default for both gradients.
+-If the user has either gradient type selected, they can
+customize the gradient displayed using the 4 different color
+selectors. They can then choose how many Color Stops they want
+in their new gradient, between 2-4. Clicking the "Create New
+Gradient" button when any gradient type is selected will create
+a respective gradient with the selected color stops, evenly
+divided, and immediately apply it to the background.
+-The color of any other main part of the visualizer, except for
+the circles, can be selected as well. Color changes for
+horizontal and vertical lines, as well as the bars, are
+immediately applied.
+-The user can also check off to apply simple, additional effects:
+Noise, Inverted Colors, and and Emboss effect.
+
+DEFAULTS:
+-50 Volume, 0 Delay
+-Bars Shown, default colors of white and black
+-Horizontal Line Shown, default color of white
+-Inverted Lines Shown
+-No Background
+-Frequency Audio Data displayed

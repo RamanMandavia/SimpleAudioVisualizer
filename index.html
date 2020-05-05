@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Audio Visualizer</title>
+	<link href="styles/default-styles.css" type="text/css" rel="stylesheet" />
+	<script src="./src/loader.js" type="module"></script>
+</head>
+<body>
+<div id="mainDiv">
+    <h1>Raman's Audio Visualizer</h1>
+    <div id="canvasDiv">
+	    <canvas width="1000" height="500"></canvas>
+    </div>
+	<div id="controlsDiv">
+	<h2>Controls</h2>
+		<section id="audioControls">
+		<h3>Audio:</h3>
+			<button id="playButton" data-playing="no"></button>
+			<input type="file" id="userTrack" title="Pick a File" />
+			<br>
+			<label>Track: 
+				<select id="trackSelect">
+					<option value="media/MickGordon-OnlyThingTheyFear.mp3" selected>The Only Thing They Fear Is You</option>
+					<option value="media/MickGordon-BFG10000.mp3">BFG-10000</option>
+					<option value="media/TheClockTower.mp3">The Clock Tower</option>
+					<option value="media/TheGreatSchism.mp3">The Great Schism</option>
+					<option value="media/HallowedBeThyName.mp3">Hallowed Be Thy Name</option>
+				</select>
+			</label>
+			<br>
+			Track Progress:
+			<span id="trackProgress">???</span>
+			<br>
+			Volume: <input type="range" id="volumeSlider" min="0" max="2" value="1" step="0.01">
+			<span id="volumeLabel">???</span>
+            Delay/Reverb:
+            <input id="delaySlider" type="range" min="0.0" max="1.0" value="0.0" step=".1">
+            <span id="delayLabel">0.0</span>
+		</section>
+		
+		<section id="visualControls">
+           <h3>Visual:</h3>
+           <button id="fsButton">Full Screen</button>
+            <br>
+            <h4>Center:</h4>
+            <span><input type="checkbox" id="circlesCB"><label for="circlesCB">Show Circles</label></span>
+            <br>
+            Circle Max Radius: <input type="range" id="radiusSlider" min="75" max="300" value="150" step="0.01">
+            <span id="radiusLabel">???</span>
+            <br>
+            <span><input type="checkbox" id="barsCB" checked><label for="barsCB">Show Bars</label></span>
+            <br>
+            <label>Bar Fill: <input id="barFillColor" type="color" value="#ffffff"/></label>
+            <label>Bar Outiline: <input id="barOutlineColor" type="color" value="#000000"/></label>
+            <br>
+            <h4>Lines:</h4>
+            <span><input type="checkbox" id="horLineCB" checked><label for="horLineCB">Horizontal Line</label></span>
+            <label>| Color: <input id="horLineColor" type="color" value="#ffffff"/></label>
+            <br>
+            <span><input type="checkbox" id="vertLineCB"><label for="vertLineCB">Vertical Line</label></span>
+            <label>| Color: <input id="vertLineColor" type="color" value="#ffffff"/></label>
+            <br>
+            <span><input type="checkbox" id="invertLines" checked><label for="invertLines">Show Inverted Lines</label></span>
+            <br>
+            <h4>Background:</h4>
+            <label for="none">None</label>
+            <input type="radio" id="none" name="background" value="none" checked>
+            <label for="linearGradient">| Linear Gradient</label>
+            <input type="radio" id="linearGradient" name="background" value="linearGradient">
+            <label for="radialGradient">| Radial Gradient</label>
+            <input type="radio" id="radialGradient" name="background" value="radialGradient">
+            <br>
+            <label>Gradient Color Stops:
+               <select id="colorStopNum">
+                <option value=2 selected>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                </select>
+            </label>
+            <br>
+            <label>Color 1: <input id="bgColorPicker1" type="color" value="#0000ff"/></label>
+            <label>Color 2: <input id="bgColorPicker2" type="color" value="#000000"/></label>
+            <label>Color 3: <input id="bgColorPicker3" type="color" /></label>
+            <label>Color 4: <input id="bgColorPicker4" type="color" /></label>
+            <br>
+            <button id="newGradient">Create New Gradient</button>
+            <h4>Extra Effects:</h4>
+            <span><input type="checkbox" id="noiseCB"><label for="noiseCB">Show Noise</label></span>
+            <span><input type="checkbox" id="invertCB"><label for="invertCB">Invert Colors</label></span>
+            <span><input type="checkbox" id="embossCB"><label for="embossCB">Show Emboss</label></span>
+            <br>
+        </section>
+        
+        <section id="visType">
+             <h3>Audio Data Type:</h3>
+             <label for="frequency">Frequency</label>
+             <input type="radio" id="frequency" name="dataType" value="frequency"
+         checked>
+             <label for="waveform">| Waveform</label>
+             <input type="radio" id="waveform" name="dataType" value="waveform">
+        </section>
+	</div>
+</div>
+</body>
+</html>
